@@ -4,15 +4,34 @@
     padding: 0;
 }
 
+
 html,body{
     height: 100%;
     width: 100%;
 }
 
+body{
+    background-color: black;
+}
 
 
-.App {
-    font-family: sans-serif;
-    text-align: center;
-  }
+
+
+
+
+   
   
+
+   .tick{
+    color: white;
+   }
+ 
+   .origin{
+    stroke: white;
+    opacity: 0.6;
+
+   }
+   .domain{
+    stroke: white;
+    opacity: 0.6;
+   }

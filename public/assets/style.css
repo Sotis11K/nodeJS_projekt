@@ -9,7 +9,20 @@ html, body {
   width: 100%;
 }
 
-.App {
-  font-family: sans-serif;
-  text-align: center;
+body {
+  background-color: black;
+}
+
+.tick {
+  color: white;
+}
+
+.origin {
+  stroke: white;
+  opacity: 0.6;
+}
+
+.domain {
+  stroke: white;
+  opacity: 0.6;
 }/*# sourceMappingURL=style.css.map */

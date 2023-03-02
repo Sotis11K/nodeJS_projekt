@@ -23,7 +23,6 @@ app.get('/', function(req,res){
             throw err;
         } else {
             obj = {data: results};
-            console.log(obj)
             res.render('index', obj)
         }
     });
