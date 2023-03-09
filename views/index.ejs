@@ -8,33 +8,63 @@
 	<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
 	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
-    
     <script src="/app.js" defer></script>
     <script src="/src/functionPlot.js" defer></script>
 
-    <title>Document</title>
+    <title>Graph</title>
 </head>
 <body>
 
-    <div id="root"></div>
+    <div class="container">
+        <div class="user-coloumn">
+            <div class="settings-container">
+                <img src="/Images/list.png" alt="Dropdown">
+                <button id="dropdown">Temp</button>
+            </div>
+            <h1>Graph Visualizer</h1>
+            <div class="graph-input">
+                <input id="graphFunction" type="text" placeholder="Example: x^2...">
+                <button class="submit">Graph</button>
+            </div>
+            <div class="history">
+                <h2>History</h2>
+                <div class="history-container">
+                    <p>test</p>
+                </div>
+            </div>
+        </div>
+        <div id="root"></div>
+    </div>
 
 
 
-    <!-- <h1>brjawudba</h1>
-    <% data.forEach(function (post) { %>
-        <% if(post.picture != ''){ %>
-        <img src="<%= post.picture %>">
-        <% } %> 
-        <p><%= post.text1 %></p>
-        <p><%= post.text2 %></p>
-        <%= post.date_added %>
-<% }) %> -->
 
+<script>
+    var submit = document.querySelector(".submit")
+    submit.addEventListener("click", inputReader)
 
+function inputReader(){
 
+    if(document.querySelector('#graphFunction').value == ""){
+        return
+    }
+    else{
+        let p = document.createElement("p");
+        p.innerHTML = document.querySelector("#graphFunction").value
+        document.querySelector(".history-container").append(p);
+    }
+    
+}
 
+var settings = document.querySelector("#dropdown")
+settings.addEventListener("click", settings)
 
+function settings(){
+    console.log("funkar")
+    document.querySelector(".settings-container").style="width:10%;"
+}
 
+</script>
 
 </body>
 </html>
