@@ -39,10 +39,17 @@ body{
             flex-direction: row;
             left: 0;
             border-left: solid white 2px;
-            button{
-                height: 2rem;
-                width: 40%;
+            .button{
+                margin-left: 0.6rem;
+                font-size: 2rem;
+                color: white;
+                height: max-content;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
             }
+
             .settings-block{
                 visibility: hidden;
                 height: 100%;
@@ -50,6 +57,25 @@ body{
                 background-color: hsl(0, 0%, 25%);
                 border-right: white solid 2px;
                 box-shadow: 0 0 10px 2px white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                .selection-container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: white;
+                    gap: 5px;
+                    i{
+                        color: white;
+                        font-size: 2rem;
+                        &:hover{
+                            opacity: 0.6;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
         h1{
@@ -97,32 +123,39 @@ body{
                 }
             }
         }
-        .history{
+        .category-container{
             margin-top: 10%;
             width: 100%;
             height: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            .history-container{
-                overflow: auto;
-                width: 80%;
-                height: 16rem;
-                margin-top: 4%;
+            background-color: red;
+            .history{
+                display: none;
+                background-color: yellow;
+                width: 100%;
+                height: max-content;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-                gap: 1rem;
-                padding: 10px;
-                p{
-                    color: white;
-                    background-color: hsl(0, 0%, 40%);
-                    height: 2rem;
-                    font-size: 1.75rem;
-                    text-indent: 1rem;
-                    border-radius: 0.25rem;
-                    width: 100%;
-                    box-shadow: 0 0 2px 2px hsl(0, 0%, 40%);
+                flex-direction: column;
+                .history-container{
+                    overflow: auto;
+                    width: 80%;
+                    height: 16rem;
+                    margin-top: 4%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 10px;
+                    p{
+                        color: white;
+                        background-color: hsl(0, 0%, 40%);
+                        height: 2rem;
+                        font-size: 1.75rem;
+                        text-indent: 1rem;
+                        border-radius: 0.25rem;
+                        width: 100%;
+                        box-shadow: 0 0 2px 2px hsl(0, 0%, 40%);
+                    }
                 }
             }
             h2{
@@ -170,5 +203,3 @@ body{
     stroke: white;
     opacity: 0.6;
    }
-
-   
