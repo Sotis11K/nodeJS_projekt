@@ -25,17 +25,31 @@ body {
   height: 100vh;
   width: 40%;
   box-shadow: 5px 0 3px -1px hsl(0, 0%, 20%);
-  margin-left: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .container .user-coloumn .settings-container {
-  height: 100vh;
-  width: 10%;
-  background-color: red;
+  background-color: transparent;
+  height: 100%;
   position: absolute;
+  display: flex;
+  width: 12%;
+  flex-direction: row;
   left: 0;
+  border-left: solid white 2px;
+}
+.container .user-coloumn .settings-container button {
+  height: 2rem;
+  width: 40%;
+}
+.container .user-coloumn .settings-container .settings-block {
+  visibility: hidden;
+  height: 100%;
+  width: 0%;
+  background-color: hsl(0, 0%, 25%);
+  border-right: white solid 2px;
+  box-shadow: 0 0 10px 2px white;
 }
 .container .user-coloumn h1 {
   color: white;
@@ -61,13 +75,13 @@ body {
   outline: none;
   border: none;
   border-radius: 0.25rem;
-  box-shadow: 0 0 3px 2px hsl(240, 100%, 45%);
+  box-shadow: 0 0 3px 2px #2BB2F5;
   text-indent: 10px;
   background-color: black;
   color: white;
 }
 .container .user-coloumn .graph-input input:focus {
-  box-shadow: 0 0 6px 4px hsl(240, 100%, 45%);
+  box-shadow: 0 0 6px 4px #2BB2F5;
 }
 .container .user-coloumn .graph-input .submit {
   width: 30%;
@@ -77,10 +91,10 @@ body {
   height: 1.5rem;
   color: white;
   background-color: black;
-  box-shadow: 0 0 3px 2px hsl(240, 100%, 45%);
+  box-shadow: 0 0 3px 2px #2BB2F5;
 }
 .container .user-coloumn .graph-input .submit:hover {
-  box-shadow: 0 0 6px 4px hsl(240, 100%, 45%);
+  box-shadow: 0 0 6px 4px #2BB2F5;
   cursor: pointer;
 }
 .container .user-coloumn .history {
@@ -100,6 +114,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding: 10px;
 }
 .container .user-coloumn .history .history-container p {
   color: white;
@@ -109,6 +124,7 @@ body {
   text-indent: 1rem;
   border-radius: 0.25rem;
   width: 100%;
+  box-shadow: 0 0 2px 2px hsl(0, 0%, 40%);
 }
 .container .user-coloumn .history h2 {
   text-align: center;
@@ -125,12 +141,17 @@ body {
   margin-right: 1rem;
 }
 
-g {
+text.title {
   stroke: white;
 }
 
-.tick {
-  color: red;
+text {
+  color: white;
+}
+
+.tick line {
+  stroke: white;
+  opacity: 0.3;
 }
 
 .origin {

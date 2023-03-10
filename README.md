@@ -1,7 +1,9 @@
 ## IDÉER FÖR DATABAS
 
+- Inloggning. 
 - Inställningar för färger via databas. 
 - Sparar historik i databas. 
+- En kalkylator funktion. Beräkna integraler, lutningar, tangenter och etc
 
 
 

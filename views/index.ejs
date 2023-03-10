@@ -11,6 +11,7 @@
     <script src="/app.js" defer></script>
     <script src="/src/functionPlot.js" defer></script>
 
+
     <title>Graph</title>
 </head>
 <body>
@@ -18,8 +19,10 @@
     <div class="container">
         <div class="user-coloumn">
             <div class="settings-container">
-                <img src="/Images/list.png" alt="Dropdown">
-                <button id="dropdown">Temp</button>
+                <div class="settings-block">
+                    <img src="../public/Images/list.png" alt="Dropdown">
+                </div>
+                <button id="dropdown" onclick="settings()">Temp</button>
             </div>
             <h1>Graph Visualizer</h1>
             <div class="graph-input">
@@ -29,7 +32,6 @@
             <div class="history">
                 <h2>History</h2>
                 <div class="history-container">
-                    <p>test</p>
                 </div>
             </div>
         </div>
@@ -40,11 +42,35 @@
 
 
 <script>
+
+var counter = 0;
+
+function settings(){
+
+    counter++;
+
+    if(counter%2 == 0 )
+    {
+        document.querySelector(".settings-block").style="visibility:hidden;transition-duration: 0.4s;width:0%;"
+        document.querySelector(".settings-container").style="border-left: solild 2px white;transition-delay: 0.4s;"
+
+    }
+    else if(counter%2 == 1)
+    {
+        document.querySelector(".settings-block").style="visibility:visible;transition-duration: 0.4s;width:60%;"
+        document.querySelector(".settings-container").style="border:none;"
+    }
+
+
+
+}
+
+
     var submit = document.querySelector(".submit")
     submit.addEventListener("click", inputReader)
 
 function inputReader(){
-
+    console.log("inputReader")
     if(document.querySelector('#graphFunction').value == ""){
         return
     }
@@ -54,15 +80,8 @@ function inputReader(){
         document.querySelector(".history-container").append(p);
     }
     
-}
+};
 
-var settings = document.querySelector("#dropdown")
-settings.addEventListener("click", settings)
-
-function settings(){
-    console.log("funkar")
-    document.querySelector(".settings-container").style="width:10%;"
-}
 
 </script>
 
